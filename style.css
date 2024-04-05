@@ -1,3 +1,9 @@
+@keyframes pisca {
+    0% { opacity: 0.2; }
+    50% { opacity: 1; }
+    100% { opacity: 0.2; }
+}
+
 body {
     margin: 0;
     display: flex;
@@ -10,6 +16,7 @@ body {
     background-color: #dbd5c9;
     padding: 30px;
     display: flex;
+    border-radius: 5px;
 }
 .screen {
     width: 550px;
@@ -42,15 +49,29 @@ body {
     box-shadow: 2px 2px 0 #555;
     border-radius: 8px;
 }
+
+.keyboard--button:hover {
+    background-color: rgba(0, 0, 0, 0.586);
+    width: 72px;
+    height: 42px;
+    transition-delay: 20ms;
+    transform-style: preserve-3d;
+}
 .btn--white {
     background-color: #FFF;
     color: black;
     font-size: 15px;
 }
+.btn--white:hover {
+    background-color: #ffffffb7;
+}
 .btn--correct {
     background-color: #F09046;
     color: black;
     font-size: 15px; 
+}
+.btn--correct:hover {
+    background-color: #e96500e4;
 }
 .btn--confirm {
     background-color: #48C079;
@@ -58,6 +79,13 @@ body {
     font-size: 15px; 
     width: 90px;
     height: 50px;
+}
+.btn--confirm:hover {
+    background-color: #04d059d9;
+    width: 92px;
+    height: 52px;
+    transition-delay: 20ms;
+    transform-style: preserve-3d;
 }
 
 .d-1 {
@@ -84,12 +112,42 @@ body {
 .d-1-3 {
     height: 50px;
 }
+.numero {
+    display: inline-block;
+    width: 30px;
+    height: 40px;
+    border: 1px solid black;
+    text-align: center;
+    line-height: 40px;
+    font-size: 25px;
+}
+.pisca {
+    animation-name: pisca;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
 .d-1-4 {
     flex: 1;
     line-height: 30px;
 }
 .d-1-right {
     width: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.d-1-image {
+    border: 1px solid black;
+    background-color: white;
+    text-align: center;
+    font-size: 14px;
+}
+.d-1-image img {
+    width: 100%;
+}
+.d-1-image.small {
+    width: 80%;
+    font-size: 12px;
 }
 .d-2 {
     height: 50px;
