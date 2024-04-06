@@ -111,6 +111,8 @@ body {
 }
 .d-1-3 {
     height: 50px;
+    display: flex;
+    align-items: center;
 }
 .numero {
     display: inline-block;
@@ -160,4 +162,14 @@ body {
     font-size: 35px;
     text-align: center;
     padding: 5px;
+}
+
+.aviso--gigante {
+    font-size: 70px;
+    font-weight: bold;
+    text-align: center;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
